@@ -1,0 +1,37 @@
+{
+	"name": "fancyfs",
+	"version": "0.0.0-dev.0",
+	"description": "fs functions wrapped with promises",
+	"author": "Chase Moskal <chasemoskal@gmail.com>",
+	"license": "ISC",
+	"main": "dist",
+	"scripts": {
+		"prepare": "run-s clean build test",
+		"clean": "rm -rf dist && mkdir dist",
+		"build": "run-s build-modules build-barrels",
+		"build-modules": "tsc",
+		"build-barrels": "barrelsby --directory source --delete --exclude source/_archive",
+		"watch": "tsc -w",
+		"test": "exit 0"
+	},
+	"keywords": [
+		"fs-promises",
+		"async",
+		"fs",
+		"promises"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chase-moskal/fancyfs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/chase-moskal/fancyfs/issues"
+	},
+	"homepage": "https://github.com/chase-moskal/fancyfs#readme",
+	"devDependencies": {
+		"@types/node": "10.12.21",
+		"barrelsby": "1.0.2",
+		"npm-run-all": "4.1.5",
+		"typescript": "3.3.1"
+	}
+}
