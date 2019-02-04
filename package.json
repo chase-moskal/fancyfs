@@ -1,10 +1,11 @@
 {
 	"name": "fancyfs",
-	"version": "0.0.0-dev.0",
+	"version": "0.0.0-dev.1",
 	"description": "fs functions wrapped with promises",
 	"author": "Chase Moskal <chasemoskal@gmail.com>",
 	"license": "ISC",
 	"main": "dist",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"prepare": "run-s clean build test",
 		"clean": "rm -rf dist && mkdir dist",
