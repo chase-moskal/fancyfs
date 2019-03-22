@@ -1,7 +1,11 @@
 
-import {readFileBuffer} from "./read-file-buffer"
+import {readFile as fsReadFile} from "fs"
 
-export async function readFile(path: string, encoding = "utf8"): Promise<string> {
-	const buffer = await readFileBuffer(path)
-	return buffer.toString(encoding)
+export async function readFile(path: string): Promise<Buffer> {
+	return new Promise<Buffer>((resolve, reject) => {
+		fsReadFile(path, (error, data) => {
+			if (error) reject(error)
+			else resolve(data)
+		})
+	})
 }
