@@ -1,6 +1,6 @@
 {
 	"name": "fancyfs",
-	"version": "0.0.0-dev.1",
+	"version": "0.0.0",
 	"description": "fs functions wrapped with promises",
 	"author": "Chase Moskal <chasemoskal@gmail.com>",
 	"license": "ISC",
