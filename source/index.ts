@@ -3,5 +3,4 @@
  */
 
 export * from "./read-file";
-export * from "./read-json";
-export * from "./read-text";
+export * from "./write-file";
