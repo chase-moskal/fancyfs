@@ -5,7 +5,7 @@ import {
 	writeFile as fsWriteFile
 } from "fs"
 
-export function writeFile(
+export async function writeFile(
 	path: PathLike | number,
 	data: any,
 	options?: WriteFileOptions,
